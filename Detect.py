@@ -130,4 +130,13 @@ class Detect:
         # playsound.playsound(filename)
         return image
 
+        #todo define : for predict image and detect all the object available from the model used
+    def predictImage(self,imagePath,threshold=0.5):
+        image = cv2.imread(imagePath)
+        bboxImage = self.createBoundingBox(image,threshold)
+
+        cv2.imwrite(self.modelName +".jpg",bboxImage)
+        cv2.imshow("result",bboxImage)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 

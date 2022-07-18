@@ -140,3 +140,25 @@ class Detect:
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
+    #todo define : for predict real time or video and detect all the object available from the model used
+    def predictVideo(self,videoPath , threshold = 0.5):
+        cap = cv2.VideoCapture(videoPath)
+        if(cap.isOpened()== False):
+            print("Error video ")
+            return
+        (success,image) = cap.read()
+
+        starttime =0
+
+        while success:
+            currentTime = time.time()
+            fps = 1/(currentTime - starttime)
+            starttime = currentTime
+            bboxImage = self.createBoundingBox(image,threshold)
+            cv2.putText(bboxImage , "FPS: " +str(int(fps)),(20,70),cv2.FONT_HERSHEY_PLAIN , 2 ,(0,255,0),2)
+            cv2.imshow("RESULT ",bboxImage)
+            key=cv2.waitKey(1) & 0xFF
+            if key == ord("q"):
+                break
+            (success,image)=cap.read()
+        cv2.destroyAllWindows()

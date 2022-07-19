@@ -4,6 +4,7 @@ import os
 import tensorflow as tf
 import time
 from tensorflow.python.keras.utils.data_utils import get_file
+import bidi.algorithm, arabic_reshaper
 
 
 np.random.seed(123)
@@ -11,11 +12,14 @@ np.random.seed(123)
 #engine = pyttsx3.init()
 
 
-class Detect:
+class Detectcls:
 
  #todo define : for reading classes file
     def readClasses(self,classesFilePath):
-        with open(classesFilePath, 'r')as f:
+        #with open(classesFilePath, 'r' )as f:
+        with open(classesFilePath,encoding ='utf-8')as f:
+
+
             self.classesList = f.read().splitlines()
 
             #color list
@@ -82,14 +86,24 @@ class Detect:
                 classIndex = classIndexes[i]
 
                 #classe text centent nom dobjet .upper pour le text soit maj
-                classLabelText = self.classesList[classIndex].upper()
+                #classLabelText = self.classesList[classIndex].upper()
+
+
+
+                classLabelText = self.classesList[classIndex]#.upper()
+                #print(classLabelText)
                 classColor = self.colorlist[classIndex]
 
+                # # To get arabic outputs in terminal or kivy or even pyGame etc.
+                # reshaper = arabic_reshaper.reshape(classLabelText)
+                # bidi_text = bidi.algorithm.get_display(reshaper)
 
+                #displayText = '{} : {}%'.format(bidi_text,classConfidence)
 
                 # #test du voix
                 # tts = gTTS(text=classLabelText, lang="en")
                 # filename = "voice.mp3"
+
 
 
 

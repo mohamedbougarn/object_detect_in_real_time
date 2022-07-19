@@ -1,0 +1,92 @@
+__données de test__
+personne
+vélo
+auto
+moto
+avion
+bus
+former
+un camion
+bateau
+feu de circulation
+bouche d'incendie
+Panneau de signalisation
+panneau stop
+parcmètre
+banc
+oiseau
+chat
+chien
+cheval
+mouton
+vache
+éléphant
+ours
+zèbre
+girafe
+chapeau
+sac à dos
+parapluie
+chaussure
+lunettes
+Sac à main
+cravate
+valise
+frisbee
+des skis
+snowboard
+ballon de sport
+cerf-volant
+batte de baseball
+gant de baseball
+planche à roulette
+planche de surf
+raquette de tennis
+bouteille
+assiette
+verre de vin
+Coupe
+fourchette
+couteau
+cuillère
+bol
+banane
+Pomme
+sandwich
+orange
+brocoli
+carotte
+Hot-dog
+pizza
+Donut
+gâteau
+chaise
+canapé
+plante en pot
+lit
+miroir
+table à manger
+la fenêtre
+bureau
+toilette
+porte
+télé
+portable
+Souris
+télécommande
+clavier
+téléphone portable
+four micro onde
+four
+grille-pain
+évier
+réfrigérateur
+mixeur
+livre
+l'horloge
+vase
+les ciseaux
+ours en peluche
+sèche cheveux
+brosse à dents
+brosse à cheveux
